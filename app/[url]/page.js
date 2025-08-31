@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import clientPromise from "../lib/mongodb";
 
 export default async function Page({ params }) {
-  const { url } = params;
+  const { url } = await params;
 
   let client;
   let dbConnected = true;
